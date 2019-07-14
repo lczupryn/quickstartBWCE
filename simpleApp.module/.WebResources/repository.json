@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/simpleapp.module.Process-Resource.json",
+        "type": "generated"
+    }]
+}
