@@ -6,6 +6,7 @@
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://xmlns.example.com/20190714164634PLT"
+    xmlns:ns1="http://www.example.com/namespaces/tns/1564868973957"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -407,8 +408,62 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="245"
-                                    xsi:type="notation:Bounds" y="10"/>
+                                    x="241"
+                                    xsi:type="notation:Bounds" y="15"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    x="60"
+                                    xsi:type="notation:Bounds" y="15"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -432,10 +487,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="108"
-                                    width="400"
-                                    x="2"
-                                    xsi:type="notation:Bounds" y="2"/>
+                                    height="153"
+                                    width="381" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -586,6 +639,17 @@
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".SF NS Text" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, 0, -156, 0]$[157, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -594,10 +658,13 @@
             namespace="http://xmlns.example.com/Resource/parameters" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.com/namespaces/tns/1564868973957" prefix="tns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://xmlns.example.com/Resource/parameters"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://xmlns.example.com/Resource/headerParameters"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1564868973957"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="resource"
             partnerLinkType="ns0:partnerLinkType"
@@ -608,6 +675,8 @@
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns0:getRequest" name="get" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns0:getResponse" name="getOut-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:Element" name="SubProcess-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:Element" name="SubProcess" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -626,7 +695,9 @@
                     tibex:xpdlId="c52d985c-ed55-4343-8362-0f83c69f8fc3" variable="get">
                     <bpws:scope name="scope1">
                         <bpws:flow name="flow1">
-                            <bpws:links/>
+                            <bpws:links>
+                                <bpws:link name="SubProcessTogetOut" tibex:linkType="SUCCESS"/>
+                            </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="192285e4-600a-4f68-bc76-0d0ac0359a69"/>
                             <bpws:empty name="OnMessageEnd"
@@ -637,11 +708,34 @@
                                 tibex:xpdlId="dc112916-ff44-45d8-939f-e65d2e80ff0e" variable="getOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20190714164634PLT&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;getOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;concat(string(tib:timestamp()),&amp;quot; | &amp;quot;,$get.parameters/tns1:text)&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20190714164634PLT&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1564868973957&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SubProcess&quot;/>&#xa;    &lt;xsl:template name=&quot;getOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$SubProcess/tns2:output&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20190714164634PLT" xmlns:tns1="http://xmlns.example.com/Resource/parameters" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" version="2.0"&gt;&lt;xsl:param name="get"/&gt;&lt;xsl:template name="getOut-input" match="/"&gt;&lt;tns:getResponse&gt;&lt;item&gt;&lt;xsl:value-of select="concat(string(tib:timestamp()),&amp;quot; | &amp;quot;,$get/parameters/tns1:resourceGetParameters/tns1:text)"/&gt;&lt;/item&gt;&lt;/tns:getResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20190714164634PLT" xmlns:tns1="http://xmlns.example.com/Resource/parameters" xmlns:tns2="http://www.example.com/namespaces/tns/1564868973957" version="2.0"&gt;&lt;xsl:param name="SubProcess"/&gt;&lt;xsl:template name="getOut-input" match="/"&gt;&lt;tns:getResponse&gt;&lt;item&gt;&lt;xsl:value-of select="$SubProcess/tns2:output"/&gt;&lt;/item&gt;&lt;/tns:getResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                <bpws:targets>
+                                    <bpws:target linkName="SubProcessTogetOut"/>
+                                </bpws:targets>
                             </bpws:reply>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1564868973957&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;get&quot;/>&lt;xsl:template name=&quot;SubProcess-input&quot; match=&quot;/&quot;>&lt;tns2:Element>&lt;tns2:input>&lt;xsl:value-of select=&quot;$get/parameters/tns1:resourceGetParameters/tns1:text&quot;/>&lt;/tns2:input>&lt;tns2:output>&lt;xsl:value-of select=&quot;&amp;quot;null&amp;quot;&quot;/>&lt;/tns2:output>&lt;/tns2:Element>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="SubProcess-input"
+                                    name="SubProcess"
+                                    outputVariable="SubProcess"
+                                    tibex:xpdlId="859e9c25-700e-44dc-a14f-0ebde674d833"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:sources>
+                                    <bpws:source linkName="SubProcessTogetOut"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1564868973957&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SubProcess-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:Element>&#xa;            &lt;tns2:input>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns1:text&quot;/>&#xa;            &lt;/tns2:input>&#xa;            &lt;tns2:output>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;null&amp;quot;&quot;/>&#xa;            &lt;/tns2:output>&#xa;        &lt;/tns2:Element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="simpleapp.module.SubProcess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
