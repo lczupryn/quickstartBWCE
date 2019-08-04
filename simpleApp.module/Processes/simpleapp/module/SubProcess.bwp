@@ -405,6 +405,9 @@
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns0:Element" name="AddTimestamp-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:Element" name="AddTimestamp" sca-bpel:internal="true"/>
+        <bpws:variable name="version" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/simpleGroup/version" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -473,7 +476,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1564868973957&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;AddTimestamp-input&quot; match=&quot;/&quot;>&lt;tns:Element>&lt;tns:input>&lt;xsl:value-of select=&quot;$Start/tns:input&quot;/>&lt;/tns:input>&lt;tns:output>&lt;xsl:value-of select=&quot;concat(string(current-time()),&amp;quot; v1 | &amp;quot;,$Start/tns:input)&quot;/>&lt;/tns:output>&lt;/tns:Element>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1564868973957&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;version&quot;/>&lt;xsl:template name=&quot;AddTimestamp-input&quot; match=&quot;/&quot;>&lt;tns:Element>&lt;tns:input>&lt;xsl:value-of select=&quot;$Start/tns:input&quot;/>&lt;/tns:input>&lt;tns:output>&lt;xsl:value-of select=&quot;concat(string(current-time()),&amp;quot; | &amp;quot;,$version,&amp;quot; | &amp;quot;,$Start/tns:input)&quot;/>&lt;/tns:output>&lt;/tns:Element>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

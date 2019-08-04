@@ -59,11 +59,11 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//simpleApp.module///simpleGroup/version</name>
-			<value>v1 -default</value>
+			<value>#simpleGroup.version#</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 		</globalVariable>
 	</globalVariables>
 </repository>
