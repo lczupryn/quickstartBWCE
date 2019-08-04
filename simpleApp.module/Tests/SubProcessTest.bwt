@@ -13,12 +13,12 @@
         <informations Name="input" nameSpace="http://www.example.com/namespaces/tns/1564868973957">
           <nameSpaces prefix="tns" nameSapce="http://www.example.com/namespaces/tns/1564868973957"/>
           <Parameter Name="tns:Element">
-            <parameters Name="tns:input" Value="&quot;foo&quot;" type="string" nameSpace="http://www.example.com/namespaces/tns/1564868973957"/>
+            <parameters Name="tns:input" Value="foo" type="string" nameSpace="http://www.example.com/namespaces/tns/1564868973957"/>
             <parameters Name="tns:output" Value="null" type="string" nameSpace="http://www.example.com/namespaces/tns/1564868973957"/>
           </Parameter>
         </informations>
       </Inputs>
-      <resolvedInput inputValue="&lt;tns:Element xmlns:tns='http://www.example.com/namespaces/tns/1564868973957' >&lt;tns:input>&quot;foo&quot;&lt;/tns:input>&lt;tns:output>null&lt;/tns:output>&lt;/tns:Element>"/>
+      <resolvedInput inputValue="&lt;tns:Element xmlns:tns='http://www.example.com/namespaces/tns/1564868973957' >&lt;tns:input>foo&lt;/tns:input>&lt;tns:output>null&lt;/tns:output>&lt;/tns:Element>"/>
     </Operation>
   </ProcessNode>
 </emulation:EmulationData>

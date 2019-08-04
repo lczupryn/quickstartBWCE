@@ -12,9 +12,9 @@
   <packaging>bwear</packaging>
   <properties>
     <skipTests>false</skipTests>
-    <bw.Home>/opt/tibco/bwce/bwce</bw.Home>
+    <bw.Home>/bwce/2.4</bw.Home>
     <project.type>None</project.type>
-    <failIfNoTests>false</failIfNoTests>
+    <failIfNoTests>true</failIfNoTests>
     <tibco.Home>/opt/tibco/bwce</tibco.Home>
   </properties>
   <build>

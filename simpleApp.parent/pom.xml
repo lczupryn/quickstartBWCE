@@ -18,4 +18,7 @@
       </plugin>
     </plugins>
   </build>
+  <properties>
+  	<tibco.Home>/opt/tibco/bwce</tibco.Home>
+  </properties>
 </project>

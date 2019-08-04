@@ -423,7 +423,7 @@
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="d1e75f15-a25c-4aa5-a336-be32cb060c29"
+                    tibex:xpdlId="745bec5a-d6ea-4b26-a1ad-2aff74414a54"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
                         <bpws:source linkName="StartToEnd"/>
@@ -436,7 +436,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="End-input"
                     name="End"
-                    tibex:xpdlId="d0135748-a96f-4ce8-a6c9-58f10eea451c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="2f4f680c-806a-4dea-baba-056ff2dc7fc3" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="MapperToEnd"/>
                     </bpws:targets>
@@ -464,7 +464,7 @@
                 <tibex:activityExtension
                     inputVariable="AddTimestamp-input"
                     name="AddTimestamp" outputVariable="AddTimestamp"
-                    tibex:xpdlId="df9501c7-1dc8-487f-be3f-5ea53e53b1be" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="e46a552b-4135-4c1c-b321-dee4b8d4fafe" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="StartToEnd"/>
                     </bpws:targets>

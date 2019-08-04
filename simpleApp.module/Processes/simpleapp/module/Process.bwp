@@ -723,7 +723,7 @@
                                     inputVariable="SubProcess-input"
                                     name="SubProcess"
                                     outputVariable="SubProcess"
-                                    tibex:xpdlId="859e9c25-700e-44dc-a14f-0ebde674d833"
+                                    tibex:xpdlId="77669587-00b6-4838-a2da-4f008e34821a"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:sources>
                                     <bpws:source linkName="SubProcessTogetOut"/>
